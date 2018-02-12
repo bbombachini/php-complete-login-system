@@ -25,7 +25,6 @@
   <h2>You have logged in!</h2>
   <?php echo $greeting; ?>
   <?php echo $_SESSION['user_name']; ?><br>
-  <p>Your last login was:</p>
   <?php echo $_SESSION['last_login'] ?>
 
 

@@ -11,12 +11,18 @@
       $founduser = mysqli_fetch_array($user_set, MYSQLI_ASSOC);
       $id = $founduser['user_id'];
       // echo $id;
-      // Necessary to set otherwise would print the server time
+      // Necessary to set timezone otherwise would print the server time
       date_default_timezone_set('America/Toronto');
       $_SESSION['user_id'] = $id;
       $_SESSION['user_name'] = $founduser['user_fname'];
-      $_SESSION['last_login'] = $founduser['last_login'];
       $_SESSION['time'] = date("H");
+      if(!is_null($founduser['last_login'])){
+        $_SESSION['last_login'] = "Your last login was on ".$founduser['last_login'];
+      } else {
+        $_SESSION['last_login'] = "Welcome, this is your first Login!";
+      }
+
+
       if(mysqli_query($link, $loginstring)){
         //Update IP on db
         $update = "UPDATE tbl_user SET user_ip='{$ip}' WHERE user_id={$id}";
