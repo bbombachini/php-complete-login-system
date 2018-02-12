@@ -11,15 +11,28 @@
       $founduser = mysqli_fetch_array($user_set, MYSQLI_ASSOC);
       $id = $founduser['user_id'];
       // echo $id;
+      // Necessary to set otherwise would print the server time
+      date_default_timezone_set('America/Toronto');
       $_SESSION['user_id'] = $id;
       $_SESSION['user_name'] = $founduser['user_fname'];
+      $_SESSION['last_login'] = $founduser['last_login'];
+      $_SESSION['time'] = date("H");
       if(mysqli_query($link, $loginstring)){
+        //Update IP on db
         $update = "UPDATE tbl_user SET user_ip='{$ip}' WHERE user_id={$id}";
         $updatequery = mysqli_query($link, $update);
+
+        //Update login on db
+        $updateLogin = "UPDATE tbl_user SET last_login= NOW() WHERE user_id={$id}";
+        $updateLoginQuery = mysqli_query($link, $updateLogin);
+
       }
       redirect_to("admin_index.php");
     } else {
-      $message = "Learn how to type you dumba%&";
+
+      $insertLog = "INSERT INTO tbl_login_attempts (login_attempts, user_ip) VALUES (1, '$ip')";
+      $insertQuery = mysqli_query($link, $insertLog);
+      $message = "Seems that there's something wrong. You have more 2 attempts. Try again!";
       return $message;
     }
 
