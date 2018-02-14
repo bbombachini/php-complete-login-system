@@ -19,20 +19,32 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="css/main.css">
+<link href="https://fonts.googleapis.com/css?family=Bitter|Nanum+Gothic" rel="stylesheet">
 <title>Welcome to your admin panel login</title>
 </head>
-<body>
-  <?php if(!empty($message)){ echo $message; } ?>
-  <form action="admin_login.php" method="post">
-    <label>Username:</label>
-    <input type="text" name="username" value="">
-    <br>
-    <label>Password:</label>
-    <input type="password" name="password" value="">
-    <br><br>
-    <input type="submit" name="submit" value="Show me the money">
+  <body>
+    <h1 class="hidden">Login Panel</h1>
+    <div class="container">
+      <?php include('../includes/admin-nav.html'); ?>
+      <div class="content">
+        <h1 class="hidden">Content</h1>
+        <h2>Welcome, log in to get started!</h2>
+        <?php if(!empty($message)){ echo $message; } ?>
+        <form action="admin_login.php" method="post">
+          <label>Username:</label>
+          <input type="text" name="username" value="">
+          <br>
+          <label>Password:</label>
+          <input type="password" name="password" value="">
+          <br><br>
+          <input type="submit" id="submit" name="submit" value="LOGIN">
 
-  </form>
+        </form>
+      </div>
+      <?php include('../includes/footer.html'); ?>
+    </div>
 
-</body>
+
+  </body>
 </html>
