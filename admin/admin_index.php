@@ -22,11 +22,12 @@
 <title>Welcome to your admin panel login</title>
 </head>
 <body>
+  <?php include('includes/admin-nav.html'); ?>
   <h2>You have logged in!</h2>
   <?php echo $greeting; ?>
   <?php echo $_SESSION['user_name']; ?><br>
   <?php echo $_SESSION['last_login'] ?>
 
-
+  <?php include('includes/footer.html'); ?>
 </body>
 </html>
