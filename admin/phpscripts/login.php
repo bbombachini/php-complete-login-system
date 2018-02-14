@@ -11,11 +11,6 @@
     if(mysqli_num_rows($checkUser)){
       $founduser = mysqli_fetch_array($checkUser, MYSQLI_ASSOC);
       $id = $founduser['user_id'];
-      // $loginstring = "SELECT * FROM tbl_user WHERE user_name='{$username}' AND user_pass='{$password}'";
-      // // echo $loginstring;
-      // $user_set = mysqli_query($link, $loginstring);
-      // echo mysqli_num_rows($user_set);
-      // if(mysqli_num_rows($user_set)) {
 
       // Before allow user in, check if it's blocked
       if($founduser['user_attempts'] < 3){
