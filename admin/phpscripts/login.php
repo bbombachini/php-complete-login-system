@@ -11,11 +11,6 @@
     if(mysqli_num_rows($checkUser)){
       $founduser = mysqli_fetch_array($checkUser, MYSQLI_ASSOC);
       $id = $founduser['user_id'];
-      // $loginstring = "SELECT * FROM tbl_user WHERE user_name='{$username}' AND user_pass='{$password}'";
-      // // echo $loginstring;
-      // $user_set = mysqli_query($link, $loginstring);
-      // echo mysqli_num_rows($user_set);
-      // if(mysqli_num_rows($user_set)) {
 
       // Before allow user in, check if it's blocked
       if($founduser['user_attempts'] < 3){
@@ -31,7 +26,7 @@
               if(!is_null($founduser['last_login'])){
                 $_SESSION['last_login'] = "Your last login was on ".$founduser['last_login'];
               } else {
-                $_SESSION['last_login'] = "Welcome, this is your first Login!";
+                $_SESSION['last_login'] = "This is your first Login!";
               }
 
               //Update IP on db

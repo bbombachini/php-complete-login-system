@@ -1,0 +1,25 @@
+/*
+Errno::ENOENT: No such file or directory @ rb_sysopen - sass/main.scss
+
+Backtrace:
+/Users/barbarafrancobombachini/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:454:in `read'
+/Users/barbarafrancobombachini/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:454:in `update_stylesheet'
+/Users/barbarafrancobombachini/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/barbarafrancobombachini/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/barbarafrancobombachini/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/barbarafrancobombachini/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:294:in `watch'
+/Users/barbarafrancobombachini/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.3/lib/sass/plugin.rb:109:in `method_missing'
+/Users/barbarafrancobombachini/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.3/lib/sass/exec/sass_scss.rb:360:in `watch_or_update'
+/Users/barbarafrancobombachini/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.3/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/Users/barbarafrancobombachini/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.3/lib/sass/exec/base.rb:52:in `parse'
+/Users/barbarafrancobombachini/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.3/lib/sass/exec/base.rb:19:in `parse!'
+/Users/barbarafrancobombachini/.rvm/gems/ruby-2.4.1@global/gems/sass-3.5.3/bin/sass:13:in `<top (required)>'
+/Users/barbarafrancobombachini/.rvm/rubies/ruby-2.4.1/bin/sass:23:in `load'
+/Users/barbarafrancobombachini/.rvm/rubies/ruby-2.4.1/bin/sass:23:in `<main>'
+/Users/barbarafrancobombachini/.rvm/gems/ruby-2.4.1@global/bin/ruby_executable_hooks:15:in `eval'
+/Users/barbarafrancobombachini/.rvm/gems/ruby-2.4.1@global/bin/ruby_executable_hooks:15:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Errno::ENOENT: No such file or directory @ rb_sysopen - sass/main.scss"; }

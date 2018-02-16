@@ -1,0 +1,122 @@
+/* Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* End Reset */
+.hidden {
+  display: none; }
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ccc; }
+  .container .admin-nav {
+    width: 100vw;
+    height: 5vw;
+    display: flex;
+    flex-direction: row;
+    background-color: #3a3a3a;
+    justify-content: space-evenly; }
+    .container .admin-nav ul li {
+      display: inline-flex;
+      padding: 0 5vw; }
+      .container .admin-nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        font: 2vw 'Bitter', serif;
+        line-height: 5vw; }
+  .container .content {
+    width: 60vw;
+    margin: 0 auto;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.4);
+    background-color: #fff; }
+    .container .content h2 {
+      background-color: #FF6449;
+      color: #fff;
+      text-align: center;
+      font: 1.6vw 'Nanum Gothic', sans-serif;
+      line-height: 3em; }
+    .container .content .message {
+      height: 8vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      .container .content .message h3 {
+        text-align: center;
+        color: #FF6449;
+        font: 1.7vw 'Nanum Gothic', sans-serif; }
+    .container .content form {
+      width: 20vw;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 0 10vw 0;
+      font: 1vw 'Nanum Gothic', sans-serif; }
+      .container .content form label {
+        color: #3a3a3a;
+        font-size: 1.1vw;
+        padding: 5px 0; }
+      .container .content form input {
+        box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.4);
+        border-radius: 8px;
+        height: 2em;
+        font-size: 1vw; }
+      .container .content form input#submit {
+        margin: 0 auto;
+        font-size: 1.4vw;
+        width: 10vw;
+        background-color: #FF6449;
+        color: #fff;
+        cursor: pointer; }
+    .container .content .greeting {
+      padding: 8vw; }
+      .container .content .greeting h3 {
+        font: 1.8vw 'Bitter', serif;
+        color: #48D1CC;
+        font-style: italic;
+        padding-bottom: 7vw; }
+      .container .content .greeting h4 {
+        font: 1vw 'Nanum Gothic', sans-serif; }
+
+/*# sourceMappingURL=main.css.map */

@@ -19,15 +19,23 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="css/main.css">
+<link href="https://fonts.googleapis.com/css?family=Bitter|Nanum+Gothic" rel="stylesheet">
 <title>Welcome to your admin panel login</title>
 </head>
 <body>
-  <?php include('includes/admin-nav.html'); ?>
-  <h2>You have logged in!</h2>
-  <?php echo $greeting; ?>
-  <?php echo $_SESSION['user_name']; ?><br>
-  <?php echo $_SESSION['last_login'] ?>
+  <h1 class="hidden">Login Panel</h1>
+  <div class="container">
+    <?php include('../includes/admin-nav.html'); ?>
+    <div class="content">
+      <h2>You have logged in!</h2>
+      <div class="greeting">
+        <?php echo '<h3>'.$greeting.'</h3>'; ?>
+        <?php echo '<h4>Welcome, '.$_SESSION['user_name'].'</h4>'; ?><br>
+        <?php echo '<h4>'.$_SESSION['last_login'].'</h4>'; ?>
+      </div>
+    </div>
 
-  <?php include('includes/footer.html'); ?>
+  </div>
 </body>
 </html>
