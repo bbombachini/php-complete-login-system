@@ -24,7 +24,7 @@
 <title>Welcome to your admin panel login</title>
 </head>
 <body>
-<<<<<<< HEAD
+
   <h1 class="hidden">Login Panel</h1>
   <div class="container">
     <?php include('../includes/admin-nav.html'); ?>
@@ -37,16 +37,6 @@
       </div>
     </div>
 
-=======
-  <div class="container">
-    <?php include('../includes/admin-nav.html'); ?>
-    <h2>You have logged in!</h2>
-    <?php echo $greeting; ?>
-    <?php echo $_SESSION['user_name']; ?><br>
-    <?php echo $_SESSION['last_login'] ?>
-
-    <?php include('../includes/footer.html'); ?>
->>>>>>> e13e2752231e43089afa24bf2702b1188098018c
   </div>
 </body>
 </html>

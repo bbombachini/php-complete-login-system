@@ -30,15 +30,13 @@
       <div class="content">
         <h1 class="hidden">Content</h1>
         <h2>Welcome, log in to get started!</h2>
-<<<<<<< HEAD
+
         <div class="message">
           <?php if(!empty($message)){
             echo '<h3>'.$message.'</h3>';
           } ?>
         </div>
-=======
-        <?php if(!empty($message)){ echo $message; } ?>
->>>>>>> e13e2752231e43089afa24bf2702b1188098018c
+
         <form action="admin_login.php" method="post">
           <label>Username:</label>
           <input type="text" name="username" value="">
@@ -50,11 +48,11 @@
 
         </form>
       </div>
-<<<<<<< HEAD
+
 
     </div>
 
-=======
+
       <?php include('../includes/footer.html'); ?>
     </div>
 
