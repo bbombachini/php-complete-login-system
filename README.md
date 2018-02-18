@@ -4,7 +4,7 @@ It's a system based on PHP that allows users to login and gain access to their w
 ## Getting Started
 Git clone the repo inside your /htdocs folder on OSX or inside /www folder on Windows.
 
-$ $ git clone <repo-url> <folder-name>
+$ git clone <repo-url> <folder-name>
 
 Install the db_movies.sql file that is inside includes folder on your local MAMP/WAMP/LAMP and change the connect.php file.
 
@@ -25,5 +25,5 @@ MAMP
 
 This project uses php and sass to run a login page and allow users in and out. Checking their passwords and locking them out after 3 failed attempts.
 
-##License
+## License
 This project is licensed under the MIT License - see the LICENSE.md file for details

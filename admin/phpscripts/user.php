@@ -6,6 +6,8 @@
     $createuser = mysqli_query($link, $userstring);
 
       if($createuser) {
+        $sendMail = submitMsg($fname, $username, $password, $email);
+        $_SESSION['message'] = 'User created with success!';
         redirect_to('admin_index.php');
       } else {
         $message = "Failed to add this user.";
