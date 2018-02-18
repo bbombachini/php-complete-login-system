@@ -93,8 +93,21 @@
         font-style: italic;
         padding-bottom: 7vw;
       }
-      h4{
+      h4, h5{
         font: 1vw 'Nanum Gothic', sans-serif;
+      }
+      a {
+        text-align: center;
+        padding: 5vh;
+        float: left;
+        text-decoration: none;
+        h5{
+          padding: 2vh;
+          background-color: $blue;
+          color: #fff;
+
+        }
+
       }
     }
   }

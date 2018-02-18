@@ -67,10 +67,6 @@ table {
         line-height: 5vw; }
   .container .content {
     width: 60vw;
-<<<<<<< HEAD
-=======
-    height: 70vh;
->>>>>>> e13e2752231e43089afa24bf2702b1188098018c
     margin: 0 auto;
     box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.4);
     background-color: #fff; }
@@ -80,7 +76,6 @@ table {
       text-align: center;
       font: 1.6vw 'Nanum Gothic', sans-serif;
       line-height: 3em; }
-<<<<<<< HEAD
     .container .content .message {
       height: 8vw;
       display: flex;
@@ -110,29 +105,10 @@ table {
       .container .content form input#submit {
         margin: 0 auto;
         font-size: 1.4vw;
-=======
-    .container .content form {
-      display: flex;
-      flex-direction: column;
-      width: 20vw;
-      margin: 0 auto;
-      font: 1vw 'Nanum Gothic', sans-serif; }
-      .container .content form label {
-        color: #3a3a3a; }
-      .container .content form input {
-        box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.4);
-        border-radius: 8px;
-        height: 2em; }
-      .container .content form input#submit {
-        margin: 0 auto;
-        font-size: 1.4vw;
-        line-height: 2em;
->>>>>>> e13e2752231e43089afa24bf2702b1188098018c
         width: 10vw;
         background-color: #FF6449;
         color: #fff;
         cursor: pointer; }
-<<<<<<< HEAD
     .container .content .greeting {
       padding: 8vw; }
       .container .content .greeting h3 {
@@ -140,9 +116,16 @@ table {
         color: #48D1CC;
         font-style: italic;
         padding-bottom: 7vw; }
-      .container .content .greeting h4 {
+      .container .content .greeting h4, .container .content .greeting h5 {
         font: 1vw 'Nanum Gothic', sans-serif; }
-=======
->>>>>>> e13e2752231e43089afa24bf2702b1188098018c
+      .container .content .greeting a {
+        text-align: center;
+        padding: 5vh;
+        float: left;
+        text-decoration: none; }
+        .container .content .greeting a h5 {
+          padding: 2vh;
+          background-color: #48D1CC;
+          color: #fff; }
 
 /*# sourceMappingURL=main.css.map */

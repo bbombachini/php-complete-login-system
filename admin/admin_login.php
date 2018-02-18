@@ -56,7 +56,6 @@
       <?php include('../includes/footer.html'); ?>
     </div>
 
->>>>>>> e13e2752231e43089afa24bf2702b1188098018c
 
   </body>
 </html>
