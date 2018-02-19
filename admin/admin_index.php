@@ -28,25 +28,22 @@
   <h1 class="hidden">Login Panel</h1>
   <div class="container">
     <?php include('../includes/admin-nav.html'); ?>
-    <div class="content">
-      <h2>You have logged in!</h2>
-      <div class="greeting">
-        <?php echo '<h3>'.$greeting.'</h3>'; ?>
-        <?php echo '<h4>Welcome, '.$_SESSION['user_name'].'</h4>'; ?><br>
-        <?php echo '<h4>'.$_SESSION['last_login'].'</h4>'; ?>
-        <?php if(!empty($_GET['message'])) {
-              $message = $_GET['message'];
-              echo '<div><h3>'.$message.'</h3><div>'; } ?>
-        <a href="admin_createuser.php"><h5>Create User</h5></a>
-        <a href="phpscripts/caller.php?caller_id=logout"><h5>Sign Out</h5></a>
+      <div class="content">
+        <h2>You have logged in!</h2>
+          <div class="greeting">
+            <?php echo '<h3>'.$greeting.'</h3>'; ?>
+            <?php echo '<h4>Welcome, '.$_SESSION['user_name'].'</h4>'; ?><br>
+            <?php echo '<h4>'.$_SESSION['last_login'].'</h4>'; ?>
+            <?php if(!empty($_GET['message'])) {
+                  $message = $_GET['message'];
+                  echo '<div><h3>'.$message.'</h3></div>'; } ?>
+            <div class="links">
+              <a href="admin_createuser.php"><h5>Create User</h5></a>
+              <a href="phpscripts/caller.php?caller_id=logout"><h5>Sign Out</h5></a>
+            </div>
+          </div>
       </div>
-
-
-
-
-    </div>
-
-
   </div>
+
 </body>
 </html>

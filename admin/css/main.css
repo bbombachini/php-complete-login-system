@@ -48,7 +48,7 @@ table {
 
 .container {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #ccc; }
   .container .admin-nav {
     width: 100vw;
@@ -63,18 +63,20 @@ table {
       .container .admin-nav ul li a {
         text-decoration: none;
         color: #fff;
-        font: 2vw 'Bitter', serif;
+        font: 1.4vw 'Bitter', serif;
         line-height: 5vw; }
   .container .content {
     width: 60vw;
+    min-height: 60vh;
     margin: 0 auto;
     box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.4);
-    background-color: #fff; }
+    background-color: #fff;
+    text-align: center; }
     .container .content h2 {
       background-color: #FF6449;
       color: #fff;
       text-align: center;
-      font: 1.6vw 'Nanum Gothic', sans-serif;
+      font: 2vw 'Nanum Gothic', sans-serif;
       line-height: 3em; }
     .container .content .message {
       height: 8vw;
@@ -85,47 +87,54 @@ table {
         text-align: center;
         color: #FF6449;
         font: 1.7vw 'Nanum Gothic', sans-serif; }
-    .container .content form {
-      width: 20vw;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 0 0 10vw 0;
-      font: 1vw 'Nanum Gothic', sans-serif; }
-      .container .content form label {
-        color: #3a3a3a;
-        font-size: 1.1vw;
-        padding: 5px 0; }
-      .container .content form input {
-        box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.4);
-        border-radius: 8px;
-        height: 2em;
-        font-size: 1vw; }
-      .container .content form input#submit {
-        margin: 0 auto;
-        font-size: 1.4vw;
-        width: 10vw;
-        background-color: #FF6449;
-        color: #fff;
-        cursor: pointer; }
     .container .content .greeting {
-      padding: 8vw; }
+      padding: 6vw;
+      text-align: left; }
       .container .content .greeting h3 {
-        font: 1.8vw 'Bitter', serif;
+        font: 1.6vw 'Bitter', serif;
         color: #48D1CC;
         font-style: italic;
         padding-bottom: 7vw; }
       .container .content .greeting h4, .container .content .greeting h5 {
         font: 1vw 'Nanum Gothic', sans-serif; }
-      .container .content .greeting a {
-        text-align: center;
-        padding: 5vh;
-        float: left;
-        text-decoration: none; }
-        .container .content .greeting a h5 {
-          padding: 2vh;
-          background-color: #48D1CC;
-          color: #fff; }
+      .container .content .greeting .links {
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr; }
+        .container .content .greeting .links a {
+          text-align: center;
+          padding: 5vh;
+          float: left;
+          text-decoration: none; }
+          .container .content .greeting .links a h5 {
+            padding: 2vh;
+            background-color: #48D1CC;
+            color: #fff; }
+  .container form {
+    width: 20vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font: 1vw 'Nanum Gothic', sans-serif; }
+    .container form label {
+      color: #3a3a3a;
+      font-size: 1.1vw;
+      padding: 5px 0; }
+    .container form input, .container form select, .container form input[type=select] {
+      box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.4);
+      border-radius: 8px;
+      height: 2em;
+      font-size: 1vw;
+      margin: 10px 0; }
+    .container form select {
+      margin-top: 30px; }
+    .container form #submit {
+      margin: 5vw auto;
+      font-size: 1.4vw;
+      width: 10vw;
+      background-color: #FF6449;
+      color: #fff;
+      cursor: pointer; }
 
 /*# sourceMappingURL=main.css.map */

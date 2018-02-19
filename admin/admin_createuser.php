@@ -33,28 +33,32 @@
     <?php include('../includes/admin-nav.html'); ?>
     <div class="content">
       <h2>Create User</h2>
-      <?php if(!empty($message)){ echo '<h3>'.$message.'</h3>';} ?>
-      <form action="admin_createuser.php" method="post">
-        <label for="fname">First Name:</label>
-        <input type="text" name="fname" value="">
 
-        <label for="username">Username:</label>
-        <input type="text" name="username" value="">
+        <div class="message">
+          <?php if(!empty($message)){ echo '<h3>'.$message.'</h3>';} ?>
+        </div>
 
-        <!-- <label for="password">Password:</label>
-        <input type="text" name="password" value=""> -->
+        <form action="admin_createuser.php" method="post">
+          <label for="fname">First Name:</label>
+          <input type="text" name="fname" value="">
 
-        <label for="email">Email:</label>
-        <input type="email" name="email" value="">
+          <label for="username">Username:</label>
+          <input type="text" name="username" value="">
 
-        <select name="lvllist">
-          <option value="">Select User Level</option>
-          <option value="2">Web Admin</option>
-          <option value="1">Web Master</option>
-        </select>
+          <!-- <label for="password">Password:</label>
+          <input type="text" name="password" value=""> -->
 
-        <input type="submit" name="submit" value="Create User">
-      </form>
+          <label for="email">Email:</label>
+          <input type="email" name="email" value="">
+          
+          <select name="lvllist">
+            <option value="">Select User Level</option>
+            <option value="2">Web Admin</option>
+            <option value="1">Web Master</option>
+          </select>
+
+          <input type="submit" id="submit" name="submit" value="Create User">
+        </form>
     </div>
 
   </div>

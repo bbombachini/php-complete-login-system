@@ -31,31 +31,24 @@
         <h1 class="hidden">Content</h1>
         <h2>Welcome, log in to get started!</h2>
 
-        <div class="message">
-          <?php if(!empty($message)){
-            echo '<h3>'.$message.'</h3>';
-          } ?>
+          <div class="message">
+            <?php if(!empty($message)){
+              echo '<h3>'.$message.'</h3>';
+            } ?>
+          </div>
+
+          <form action="admin_login.php" method="post">
+            <label>Username:</label>
+            <input type="text" name="username" value="">
+            <br>
+            <label>Password:</label>
+            <input type="password" name="password" value="">
+            <br><br>
+            <input type="submit" id="submit" name="submit" value="LOGIN">
+
+          </form>
         </div>
-
-        <form action="admin_login.php" method="post">
-          <label>Username:</label>
-          <input type="text" name="username" value="">
-          <br>
-          <label>Password:</label>
-          <input type="password" name="password" value="">
-          <br><br>
-          <input type="submit" id="submit" name="submit" value="LOGIN">
-
-        </form>
-      </div>
-
-
     </div>
-
-
-      <?php include('../includes/footer.html'); ?>
-    </div>
-
 
   </body>
 </html>
