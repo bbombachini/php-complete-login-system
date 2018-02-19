@@ -5,13 +5,13 @@
   if(isset($_POST['submit'])){
     $fname = trim($_POST['fname']);
     $username = trim($_POST['username']);
-    $password = trim($_POST['password']);
+    // $password = trim($_POST['password']);
     $email = trim($_POST['email']);
     $lvllist = $_POST['lvllist'];
     if(empty($lvllist)){
       $message = "Please select a user level.";
     } else {
-      $result = createUser($fname, $username, $password, $email, $lvllist);
+      $result = createUser($fname, $username, $email, $lvllist);
       $message = $result;
     }
   }
@@ -33,7 +33,7 @@
     <?php include('../includes/admin-nav.html'); ?>
     <div class="content">
       <h2>Create User</h2>
-      <?php if(!empty($message)){ echo $message;} ?>
+      <?php if(!empty($message)){ echo '<h3>'.$message.'</h3>';} ?>
       <form action="admin_createuser.php" method="post">
         <label for="fname">First Name:</label>
         <input type="text" name="fname" value="">
@@ -41,8 +41,8 @@
         <label for="username">Username:</label>
         <input type="text" name="username" value="">
 
-        <label for="password">Password:</label>
-        <input type="text" name="password" value="">
+        <!-- <label for="password">Password:</label>
+        <input type="text" name="password" value=""> -->
 
         <label for="email">Email:</label>
         <input type="email" name="email" value="">

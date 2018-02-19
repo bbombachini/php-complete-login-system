@@ -7,6 +7,8 @@ http://php.net/manual/en/function.mb-strlen.php
 
 
 >> Encrypting passwords
+https://teamtreehouse.com/community/passwordverify-returns-false-for-correct-password
+https://stackoverflow.com/questions/30279321/how-to-use-password-hash
 http://php.net/manual/en/book.password.php
 http://php.net/manual/en/faq.passwords.php
 http://php.net/manual/en/function.password-hash.php
