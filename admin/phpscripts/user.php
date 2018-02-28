@@ -49,6 +49,32 @@
     return $verified;
   }
 
+  function editUser($id, $fname, $username, $email) {
+    include('connect.php');
 
+    $updatestring = "UPDATE tbl_user SET user_fname = '{$fname}',  user_name = '{$username}', user_email = '{$email}' WHERE user_id = {$id}";
+    // echo $updatestring;
+    $edituser = mysqli_query($link, $updatestring);
+    if($edituser) {
+      redirect_to("admin_index.php");
+    } else {
+      $message = "Failed to update.";
+      return $message;
+    }
+
+    mysqli_close($link);
+  }
+
+  function deleteUser($id){
+    include('connect.php');
+    $delstring = "DELETE FROM tbl_user WHERE user_id = {$id}";
+    $delquery = mysqli_query($link, $delstring);
+    if($delquery){
+      redirect_to("../admin_index.php");
+    } else {
+      $message = "An error ocurred while deleting this user. Try again.";
+    }
+    mysqli_close($link);
+  }
 
  ?>

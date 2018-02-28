@@ -100,7 +100,7 @@ table {
       .container .content .greeting .links {
         margin: 0 auto;
         display: grid;
-        grid-template-columns: 1fr 1fr; }
+        grid-template-columns: 1fr 1fr 1fr; }
         .container .content .greeting .links a {
           text-align: center;
           padding: 5vh;
