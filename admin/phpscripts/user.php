@@ -3,12 +3,13 @@
     include('connect.php');
     $password = random_str();
     $pass = encryptPass($password);
-    $userstring = "INSERT INTO tbl_user VALUES(NULL, '{$fname}', '{$username}', '{$pass}', '{$email}', NULL, 'no', NULL, 0, '{$lvllist}')";
+    $userstring = "INSERT INTO tbl_user VALUES(NULL, '{$fname}', '{$username}', '{$pass}', '{$email}', NULL, 'no', NULL, 0, '{$lvllist}', NULL)";
     // echo $userstring;
     $createuser = mysqli_query($link, $userstring);
 
       if($createuser) {
         $sendMail = submitMsg($fname, $username, $password, $email);
+        echo $password;
         $message = "User created with success!";
         return $message;
       } else {
@@ -64,6 +65,42 @@
 
     mysqli_close($link);
   }
+
+    function updatePassword($username, $password, $newPassword, $ip) {
+      require_once('connect.php');
+      $username = mysqli_real_escape_string($link, $username);
+      $password = mysqli_real_escape_string($link, $password);
+      $newPassword = mysqli_real_escape_string($link, $newPassword);
+
+      $user = "SELECT * FROM tbl_user WHERE user_name='{$username}'";
+      $userQuery = mysqli_query($link, $user);
+
+      //Check if user exists before match with password
+      if(mysqli_num_rows($userQuery)){
+        $founduser = mysqli_fetch_array($userQuery, MYSQLI_ASSOC);
+        $id = $founduser['user_id'];
+        $hash = $founduser['user_pass'];
+        // $pass_change = $founduser['last_pass_change'];
+        $verified = checkPass($password, $hash);
+
+        if($verified){
+            $newPass = encryptPass($newPassword);
+            $updatePass = "UPDATE tbl_user SET user_pass= '{$newPass}', user_ip= '{$ip}', last_pass_change = NOW() WHERE user_id={$id}";
+            // echo $updatePass;
+            $updatePassQuery = mysqli_query($link, $updatePass);
+
+            redirect_to("admin_login.php");
+          }
+          else {
+            $message = "Ops, something wrong. Try again!";
+            return $message;
+          }
+      } else {
+        $message = "Seems that there's something wrong. Try again!";
+        return $message;
+      }
+      mysqli_close($link);
+    }
 
   function deleteUser($id){
     include('connect.php');
