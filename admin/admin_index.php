@@ -39,8 +39,8 @@
                   echo '<div><h3>'.$message.'</h3></div>'; } ?>
             <div class="links">
               <a href="admin_createuser.php"><h5>Create User</h5></a>
-              <a href="admin_edituser.php"><h5>Edit User</h5></a>
-              <a href="phpscripts/caller.php?caller_id=logout"><h5>Sign Out</h5></a>
+              <a href="admin_edituser.php"><h5>Edit Account</h5></a>
+              <a href="phpscripts/caller.php?caller_id=logout"><h5>Log Out</h5></a>
             </div>
           </div>
       </div>

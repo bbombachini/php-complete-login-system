@@ -36,8 +36,9 @@
            $name = $_GET['name'];
            echo '<h4>Welcome, '.$name."!</h4>"; } ?>
 
-         <h3>Please insert your credentials to update your password:</h3>
+         <h3>You need to change your password in order to login.<br> Please insert your credentials:</h3>
            <?php if(!empty($message)){ echo '<h5>'.$message.'</h5>';} ?>
+
 
          <form action="admin_updatepassword.php" method="post">
              <label>Username:</label>
