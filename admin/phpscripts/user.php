@@ -9,14 +9,13 @@
 
       if($createuser) {
         $sendMail = submitMsg($fname, $username, $password, $email);
-        echo $password;
+        // echo $password;
         $message = "User created with success!";
         return $message;
       } else {
         $message = "Failed to add this user.";
         return $message;
       }
-
     mysqli_close(link);
   }
 
@@ -80,18 +79,33 @@
         $founduser = mysqli_fetch_array($userQuery, MYSQLI_ASSOC);
         $id = $founduser['user_id'];
         $hash = $founduser['user_pass'];
-        // $pass_change = $founduser['last_pass_change'];
-        $verified = checkPass($password, $hash);
+        date_default_timezone_set('America/Toronto');
+        $createdUser = $founduser['user_date'];
+      //Function to get the difference between the moment the user is created and the current moment
+        $diff  = date_diff( date_create($createdUser), date_create());
+      //To test, store the difference in minutes into a variable and set a limit in minutes;
+        $lag = $diff->i;
+        $limit = 3;
+      //Before check the password given, check if it's the first login and the user exceeded the time limit.
+        if($founduser['last_login'] == null && $lag > $limit){
+          $message = "Your password has expired! Contact your administrator.";
+          return $message;
+        } else {
+          $verified = checkPass($password, $hash);
+        }
 
         if($verified){
             $newPass = encryptPass($newPassword);
+          //Decided to create a column inside user's table to store last timestamp of the last password update
+          //For future track of password change or implement temporary password change.
             $updatePass = "UPDATE tbl_user SET user_pass= '{$newPass}', user_ip= '{$ip}', last_pass_change = NOW() WHERE user_id={$id}";
-            // echo $updatePass;
+          // echo $updatePass;
             $updatePassQuery = mysqli_query($link, $updatePass);
 
             redirect_to("admin_login.php");
           }
           else {
+            var_dump($lag);
             $message = "Ops, something wrong. Try again!";
             return $message;
           }
