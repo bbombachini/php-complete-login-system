@@ -1,0 +1,6 @@
+>>How to lock user out after determined time
+https://stackoverflow.com/questions/7850259/calculate-elapsed-time-in-php
+http://webdevzoom.com/calculate-date-time-difference-php/
+https://stackoverflow.com/questions/2040560/finding-the-number-of-days-between-two-dates
+https://stackoverflow.com/questions/40905174/calculate-the-difference-between-2-timestamps-in-php
+http://webdevzoom.com/calculate-date-time-difference-php/

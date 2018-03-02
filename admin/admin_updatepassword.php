@@ -39,7 +39,6 @@
          <h3>You need to change your password in order to login.<br> Please insert your credentials:</h3>
            <?php if(!empty($message)){ echo '<h5>'.$message.'</h5>';} ?>
 
-
          <form action="admin_updatepassword.php" method="post">
              <label>Username:</label>
              <input type="text" name="username" value="">
@@ -52,15 +51,8 @@
 
              <input type="submit" id="submit" name="submit" value="UPDATE">
          </form>
-
        </div>
-
-
-
-
      </div>
-
-
    </div>
  </body>
  </html>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 22, 2018 at 10:16 PM
+-- Generation Time: Mar 02, 2018 at 04:45 AM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -1025,21 +1025,31 @@ CREATE TABLE `tbl_user` (
   `user_ip` varchar(50) NOT NULL DEFAULT 'no',
   `last_login` timestamp NULL DEFAULT NULL,
   `user_attempts` tinyint(4) NOT NULL DEFAULT '0',
-  `user_level` varchar(15) NOT NULL
+  `user_level` varchar(15) NOT NULL,
+  `last_pass_change` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_user`
 --
 
-INSERT INTO `tbl_user` (`user_id`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_date`, `user_ip`, `last_login`, `user_attempts`, `user_level`) VALUES
-(1, 'Barbara', 'Bombachini', 'holycow', 'b_bombachini@fanshaweonline.ca', '2018-02-09 21:20:26', '::1', '2018-02-19 01:32:13', 0, '1'),
-(15, 'Dave', 'davemill', '$2y$10$Y/nHDpLiCW1hj2C2GaHLheS2MTHqgOY2MbWRiqAxi2wMuifOtTfRO', 'dave@email.com', '2018-02-18 21:41:02', 'no', NULL, 0, '1'),
-(16, 'john', 'john', '$2y$10$GC0.Nj5rQPas.ZA9fFyUE.3AgYbFlsxvqPae3XMPdQtQ03.NfALRS', 'john@email.com', '2018-02-19 00:47:53', 'no', NULL, 3, '1'),
-(17, 'barbara', 'barbs', '$2y$10$6tf3TedCMKJuwFC/1OKsPOHE3PSIC936pnoNLN.UsmSqpWBua/iW2', 'email@email.com', '2018-02-19 01:32:42', '::1', '2018-02-22 22:14:24', 0, '2'),
-(18, 'karla', 'karla', '$2y$10$eKzBMRS/nFkdK9nE3AxmoO7tyBE/92nzYBMOeRWRNmaN0ILuosR1.', 'karla@email.com', '2018-02-19 02:02:41', 'no', NULL, 1, '1'),
-(19, 'rose', 'rose', '$2y$10$txZ4yFbqQYAePbZ8iMpUbu3huexU4r/otLmc4zK2tcHgTDkuLN1NK', 'rose@email.com', '2018-02-19 02:03:33', '::1', '2018-02-19 02:03:44', 0, '1'),
-(20, 'William', 'bill', '$2y$10$dEGNpXWYmvcwqJwM7uX6Gujd2p4pUCbOrC4b8TqHPePj9VH5M4bf.', 'bill@email.com', '2018-02-19 03:43:41', 'no', NULL, 0, '2');
+INSERT INTO `tbl_user` (`user_id`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_date`, `user_ip`, `last_login`, `user_attempts`, `user_level`, `last_pass_change`) VALUES
+(1, 'Barbara', 'Bombachini', 'holycow', 'b_bombachini@fanshaweonline.ca', '2018-02-09 21:20:26', '::1', '2018-02-19 01:32:13', 0, '1', NULL),
+(15, 'Dave', 'davemill', '$2y$10$Y/nHDpLiCW1hj2C2GaHLheS2MTHqgOY2MbWRiqAxi2wMuifOtTfRO', 'dave@email.com', '2018-02-18 21:41:02', 'no', NULL, 0, '1', NULL),
+(16, 'john', 'john', '$2y$10$GC0.Nj5rQPas.ZA9fFyUE.3AgYbFlsxvqPae3XMPdQtQ03.NfALRS', 'john@email.com', '2018-02-19 00:47:53', 'no', NULL, 3, '1', NULL),
+(17, 'Barbara', 'barbs', '$2y$10$jFNsPwbFUQ1/FHa/S6Nh3e4dZbQQj1bN/vOp5RzAUGuLHUEfGLncq', 'email@email.com', '2018-02-19 01:32:42', '::1', '2018-03-02 04:37:39', 0, '2', '2018-03-01 06:29:50'),
+(18, 'karla', 'karla', '$2y$10$eKzBMRS/nFkdK9nE3AxmoO7tyBE/92nzYBMOeRWRNmaN0ILuosR1.', 'karla@email.com', '2018-02-19 02:02:41', 'no', NULL, 1, '1', NULL),
+(20, 'William', 'bill', '$2y$10$dEGNpXWYmvcwqJwM7uX6Gujd2p4pUCbOrC4b8TqHPePj9VH5M4bf.', 'bill@email.com', '2018-02-19 03:43:41', 'no', NULL, 0, '2', NULL),
+(21, 'admin', 'admin', '$2y$10$Ue.DJKp7bOEJyTq01J.dn.rcjAYInRLUrBu/E7MBCTQxOEBAXj4JC', 'admin@email.com', '2018-03-01 04:33:36', 'no', NULL, 0, '2', NULL),
+(22, 'admin', 'admin', '$2y$10$Yv7wXezPZadStrWul7k6Lex7SBQbkw/arhnzP9.6v0wAZQj/iwcRa', 'admin@email.com', '2018-03-01 04:57:41', 'no', NULL, 0, '2', NULL),
+(23, 'super', 'super', '$2y$10$qgLyew37ROZVNTAiZps/auxORjXFg8uqq5Wnym5wMn0xFWZ8rT4n2', 'super@email.com', '2018-03-01 05:21:19', '::1', NULL, 2, '1', '2018-03-01 05:22:05'),
+(24, 'dave', 'dave', '$2y$10$cnQCtwWslcMwy06.hN22AuUDTsafJX9fVpW8nmnvMSnytKS3kG94q', 'dave@email.com', '2018-03-01 05:23:15', '::1', '2018-03-01 05:23:52', 0, '1', '2018-03-01 05:23:46'),
+(25, 'carol', 'carol', '$2y$10$aHXKr3duaSCn7N9PafcqrugUhUT4OdmhM1ZONYVEiK0cVyvZ.9GYy', 'carol@email.com', '2018-03-01 06:30:53', '::1', '2018-03-01 06:54:13', 0, '1', '2018-03-01 06:54:06'),
+(26, 'john', 'john', '$2y$10$LsmSABWNEHGLe3V.3HlsDu0TTmswepvZBR2vPdLGLiasBFgCIiPNy', 'john@email.com', '2018-03-01 06:31:46', 'no', NULL, 0, '2', NULL),
+(27, 'joe', 'joe', '$2y$10$o/9eS77kvg6hd2s1KEm45enGq2bmEPr8Ok3LTT52at8rzDrj2jcKS', 'joe@email.com', '2018-03-01 06:55:15', 'no', NULL, 0, '1', NULL),
+(28, 'will', 'will', '$2y$10$4Ikf5N8u60tudnWbA.rEp.hG40TlDfaI9O8P.4/4XA4ZFOBughFRO', 'will@email.com', '2018-03-01 06:59:59', '::1', '2018-03-01 07:00:38', 0, '1', '2018-03-01 07:00:30'),
+(29, 'leo', 'leo', '$2y$10$Lnyt1fkuAk93r4hUDssylu96CMizdZ8O/KeBQqw7/RToGwVADzKku', 'leo@email.com', '2018-03-02 04:38:02', '::1', '2018-03-02 04:40:51', 0, '2', '2018-03-02 04:40:41'),
+(30, 'julio', 'julio', '$2y$10$mHDSaeqJkV5JxNWNmhQ4sutsIjL3iIfpnL3FC.CO8yIzZjg.m0cHO', 'julio@email.com', '2018-03-02 04:41:24', 'no', NULL, 0, '1', NULL);
 
 --
 -- Indexes for dumped tables
@@ -1252,7 +1262,7 @@ ALTER TABLE `tbl_urating`
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `user_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `user_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
