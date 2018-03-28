@@ -13,7 +13,6 @@
       $message = "Please fill out the required fields.";
     }
   }
-
  ?>
 <!doctype html>
 <html>
